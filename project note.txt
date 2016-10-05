@@ -1,0 +1,9 @@
+class project
+
+make a program
+use function
+need more inspiration
+what to do:
+	simple game
+	math trial
+	
