@@ -4,6 +4,7 @@ make a program
 use function
 need more inspiration
 what to do:
-	simple game
+	simple game: textbase, tictactoe, snake, pong
 	math trial
-	
+
+math trial tried based on book only +, need work for -,x,/
