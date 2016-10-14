@@ -1,5 +1,8 @@
 #include<iostream>
 #include "math trial.cpp"
+#include<cstdlib>
+#include<ctime>
+
 using namespace std;
 
 int main(){
