@@ -4,10 +4,11 @@
 
 using namespace std;
 
-void mathPlus(int, int,  int);
-void mathMinus(int, int, int);
-void mathMulti(int, int, int);
-void mathDivid(int, int, int);
+void mathPlus(int, int,  int, int);
+void mathMinus(int, int, int, int);
+void mathMulti(int, int, int, int);
+void mathDivid(int, int, int, int);
+int scoreCount(int, int);
 
 void mathChoice(){
 	
@@ -23,27 +24,35 @@ void mathChoice(){
 
 	int answer;
 	int problem;
+	int total;
 	
-//	do{
 	cout<<"MeTH GENERATOR" <<endl <<"1.(+)		2.(-)		3.(X)		4. (/) IGNORE DECIMALS" <<endl;
-//	cout<<"Your score: " <<score <<endl;
 	cout<<"Make a choice: "; cin>>problem;
 	switch(problem){
-		case 1 : mathPlus(a, b, answer);break;
-		case 2 : mathMinus(a, b, answer);break;
-		case 3 : mathMulti(x, y, answer);break;
-		case 4 : mathDivid(x, y, answer);break;
+		case 1 : mathPlus(a, b, answer, total);break;
+		case 2 : mathMinus(a, b, answer, total);break;
+		case 3 : mathMulti(x, y, answer, total);break;
+		case 4 : mathDivid(x, y, answer, total);break;
 	}
-//} while(problem<0 && problem<5);
+
 }
 
-void mathPlus(int a, int b, int answer){
+int scoreCount(int c, int answer){
+	bool getPoint(answer == c);
+	return getPoint;
+}
+
+void mathPlus(int a, int b, int answer, int total){
 	
 	int c= a+b;
 	if(a<1000){cout<<" ";} cout<< a <<endl;
 	if(b<1000){cout<<" ";}cout<< b <<endl;
 	cout<<"----- +" <<endl; 
 	cin>> answer;
+	
+	int score= scoreCount(c, answer);
+	total =+ score;
+	cout<<"Your score: " <<total <<endl;
 	
 	if (answer==c){
 		cout<<"OH JOY!" <<endl;
@@ -63,13 +72,17 @@ void mathPlus(int a, int b, int answer){
 }
 
 
-void mathMinus(int a, int b, int answer){
+void mathMinus(int a, int b, int answer, int total){
 	
 	int c= a-b;
 	if(a<1000){cout<<" ";} cout<< a <<endl;
 	if(b<1000){cout<<" ";}cout<< b <<endl;
 	cout<<"----- -" <<endl; 
 	cin>> answer;
+	
+	int score= scoreCount(c, answer);
+	total =+ score;
+	cout<<"Your score: " <<total <<endl;
 	
 	if (answer==c){
 		cout<<"EASY AIN'T IT?" <<endl;
@@ -89,13 +102,17 @@ void mathMinus(int a, int b, int answer){
 }
 
 
-void mathMulti(int x, int y, int answer){
+void mathMulti(int x, int y, int answer, int total){
 	
 	int c= x*y;
 	if(x<100){cout<<" ";} cout<< x <<endl;
 	if(y<100){cout<<" ";}cout<< y <<endl;
 	cout<<"----- x" <<endl; 
 	cin>> answer;
+	
+	int score= scoreCount(c, answer);
+	total =+ score;
+	cout<<"Your score: " <<total <<endl;
 	
 	if (answer==c){
 		cout<<"YOUR LIFE HAS MEANING AGAIN!" <<endl;
@@ -114,7 +131,7 @@ void mathMulti(int x, int y, int answer){
 	mathChoice();
 }
 
-void mathDivid(int x, int y, int answer){
+void mathDivid(int x, int y, int answer, int total){
 	int c= y/x;
 	if(y<100){cout<<" ";} cout<< y <<endl;
 	cout<<"-----" <<endl; 
@@ -122,6 +139,11 @@ void mathDivid(int x, int y, int answer){
 	<<"= ";
 	
 	cin>> answer;
+	
+	int score= scoreCount(c, answer);
+	total =+ score;
+	cout<<"Your score: " <<total <<endl;
+	
 	if (answer==c){
 		cout<<"YOUR BRAIN HAS EVOLVED!" <<endl;
 	}

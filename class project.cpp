@@ -1,7 +1,6 @@
 #include<iostream>
 #include "math trial.cpp"
-#include<cstdlib>
-#include<ctime>
+#include "decision game.cpp"
 
 using namespace std;
 
@@ -14,7 +13,7 @@ int main(){
 		<<"Take a pick: "; cin>>choice;
 	switch(choice){
 		case 1 : mathChoice();break;
-		
+		case 2 : problemsPicker();break;
 		
 	}
 	
