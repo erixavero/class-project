@@ -53,7 +53,7 @@ void set1(int choice, int counter){
 		<<"2. Call him Snakefoot" <<endl;
 		do{
 		cout<<"What do you do? "; cin>>choice;
-		}while(choice<1 && choice>2);
+		}while(choice<1 || choice>2);
 	
 	if(choice==1){
 		if((counter+1)%2==0){
@@ -83,7 +83,7 @@ void set1(int choice, int counter){
 		<<"Your parents mentioned that they won't be home in 3 hours."<<endl;cin.get();
 	do{
 	cout<<"Do you keep playing(1) or go answer the phone(2)? "; cin>>choice;
-	} while(choice<1 && choice>2);
+	} while(choice<1 || choice>2);
 	
 	if(choice==1){
 		if((counter+1)%2==0){
@@ -119,7 +119,7 @@ void set2(int choice, int counter){
 		<<"2. Stay loyal to your clients and ignore the needy"<<endl;
 		do{
 		cout<<"You only have the budget for one, what do you do? "; cin>>choice;
-		}while(choice<1 && choice>2);
+		}while(choice<1 || choice>2);
 		
 		
 		if(choice==1){
@@ -152,7 +152,7 @@ void set2(int choice, int counter){
 				<<"2. Use your dark sense of humor to make a joke about Holocaust" <<endl;
 			do{
 			cout<<"What do you do? "; cin>>choice;
-			}while(choice<1 && choice>2);
+			}while(choice<1 || choice>2);
 			
 			if(choice==1){
 					cout<<"Your companion is so impressed by the act. This might be the perfect time" <<endl
@@ -180,13 +180,45 @@ void set2(int choice, int counter){
 				else{
 					cout<<"Your companion laughs loudly towards the joke and admits as the illegitimate grandchild of" <<endl
 						<<"Dr. Carl Claudberg, a Nazi scientist who experimented with artificial insemination." <<endl
-						<<"You later stick it in with an awkward sensation." <<endl;cin.get();
+						<<"You later stick it in." <<endl;cin.get();
 				}
 			}
 }
 
-void set3(){
-	cout<<"You find yourself ";
+void set3(int choice, int counter){
+	cout<<endl <<"You're stuck under a bus stop to wait for the rain to pass on your way home." <<endl
+		<<"You see a familiar face beside you but you can't really recall the name."<<endl
+		<<"You try to talk but words won't come out, you're nervous, choking, vomit on your sweater, mom's spaghetti.."<<endl
+		<<"He says hi and ask if you're ok."
+		<<"1. Nod decisively"<<endl
+		<<"2. talk" <<endl;
+		do{
+			cout<<"What do you do? "; cin>>choice;
+		}while(choice<1 || choice>2);
+		
+		if(choice==1){
+			cout<<"He's still unsure of your answer and decides to offer you a drink" <<endl
+				<<"1. Accept"<<endl
+				<<"2. Refuse"<<endl;
+				do{
+			cout<<"What do you do? "; cin>>choice;
+		}while(choice<1 || choice>2);
+		
+		if(choice==1){
+			if((counter+1)%2==0){
+				cout<<"The drink was drugged, you were robbed...";
+			}
+			else{
+				cout<<"The drink comes out of the spot you least expect, but you still enjoy it" <<endl;
+			}
+		}
+		else{
+			cout<<"Good, you remember what your parents taught you about accepting thing from strangers."<<endl;
+		}
+		}
+		else{
+			cout<<"You have nothing to talk about, the rain passed and the section is abandoned" <<endl;
+		}
 	
 		
 }
