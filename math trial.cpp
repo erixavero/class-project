@@ -4,160 +4,302 @@
 
 using namespace std;
 
-void mathPlus(int, int,  int, int);
-void mathMinus(int, int, int, int);
-void mathMulti(int, int, int, int);
-void mathDivid(int, int, int, int);
-int scoreCount(int, int);
+//Randomizer for numbers to be printed in the problems
+class Randomizer{
+	
+	int a;
+	int b;
+	int x;
+	int y;
 
-void mathChoice(){
-	
-	unsigned seed= time(NULL);
-	srand(seed);
-	int randomNum=rand();
-	
-	int a= randomNum%900+536;
-	int b= randomNum%900+284;
-	
-	int x= randomNum%861+49;
-	int y= randomNum%617+70;
+public: 
 
-	int answer;
-	int problem;
-	int total;
-	
-	cout<<"MeTH GENERATOR" <<endl <<"1.(+)		2.(-)		3.(X)		4. (/) IGNORE DECIMALS" <<endl;
-	cout<<"Make a choice: "; cin>>problem;
-	switch(problem){
-		case 1 : mathPlus(a, b, answer, total);break;
-		case 2 : mathMinus(a, b, answer, total);break;
-		case 3 : mathMulti(x, y, answer, total);break;
-		case 4 : mathDivid(x, y, answer, total);break;
+//set and get each variable used in the math problems
+	int setA(){
+	this->a= rand()%900+536;
+	return a;
 	}
-
-}
-
-int scoreCount(int c, int answer){
-	bool getPoint(answer == c);
-	return getPoint;
-}
-
-void mathPlus(int a, int b, int answer, int total){
 	
-	int c= a+b;
-	if(a<1000){cout<<" ";} cout<< a <<endl;
-	if(b<1000){cout<<" ";}cout<< b <<endl;
+	int getA(){
+		return a;
+	}
+	
+	int setB(){
+	this->b= rand()%900+284;
+	return b;
+	}
+	
+	int getB(){
+		return b;
+	}
+	
+	int setX(){
+	this->x= rand()%861+49;
+	return x;
+	}
+	
+	int getX(){
+		return x;
+	}
+	
+	int setY(){
+	this->y= rand()%617+70;
+	return y;
+	}
+	
+	int getY(){
+		return y;
+	}
+};
+
+// Score class to run score counting in the background
+class Score{
+	int score= 0;
+
+public:
+	void scoreCount(int c, int answer){
+		if(c == answer)
+			this->score = score+1;
+	}
+	
+	int scorePrint(){
+		return score;
+	}
+};
+
+//Math class to arrange different math operations
+class Math {	
+	int answer;
+	int session;
+	
+public:
+	//called in mathChoice
+	
+	void mathPlus();	// addition problems
+	void mathMinus();	//subtraction problems
+	void mathMulti();	//multiplication problems
+	void mathDivid();	//division problems
+};
+
+void mathChoice();
+
+void Math::mathPlus(){
+	
+	Randomizer num;
+	Score count;
+	
+	// ask sessions
+	do{
+	cout<<"How many sessions? "; cin>>session;
+	if(session<0){
+		cout<<"NEGATIVE INPUT" <<endl;
+	}
+	}while(session<0);
+	
+	//the game
+	for(int i=0; i<session; i++)
+	{
+	int c= num.setA()+num.setB();
+	if(num.getA()<1000){cout<<" ";}cout<< num.getA() <<endl;
+	if(num.getB()<1000){cout<<" ";}cout<< num.getB() <<endl;
 	cout<<"----- +" <<endl; 
 	cin>> answer;
 	
-	int score= scoreCount(c, answer);
-	total =+ score;
-	cout<<"Your score: " <<total <<endl;
+	// show score
+	count.scoreCount(c, answer);
+	cout<<"Your score: " <<count.scorePrint() <<endl;
 	
 	if (answer==c){
 		cout<<"OH JOY!" <<endl;
 	}
-	else if (answer==c && a%3==0){
+	else if (answer==c && c%3==0){
 		cout<<"THE INTERNET SALUTES YOU!" <<endl;
 	}
-	else if (answer==c && a%7==0){
+	else if (answer==c && c%7==0){
 		cout<<"YOU MADE IT LOOK EASY!" <<endl;
 	}
-	else if (answer!=c && a%7==0){
+	else if (answer!=c && c%2==0){
 		cout<< "I NEVER HAD FAITH IN YOU, THE ANSWER IS " << c <<endl;
 	}
 	else{cout<< "I AM DISAPPOINTED, THE ANSWER IS " << c <<endl;
 	}
+}	
+	cout<<"Total score: " <<count.scorePrint() <<" / " <<session <<endl;
 	mathChoice();
 }
 
 
-void mathMinus(int a, int b, int answer, int total){
+void Math::mathMinus(){
 	
-	int c= a-b;
-	if(a<1000){cout<<" ";} cout<< a <<endl;
-	if(b<1000){cout<<" ";}cout<< b <<endl;
+	Randomizer num;
+	Score count;
+	
+	// ask sessions
+	do{
+	cout<<"How many sessions? "; cin>>session;
+	if(session<0){
+		cout<<"NEGATIVE INPUT" <<endl;
+	}
+	}while(session<0);
+	
+	//the game
+	for(int i=0; i<session; i++)
+	{
+	int c= num.setA()-num.setB();
+	if(num.getA()<1000){cout<<" ";}cout<< num.getA() <<endl;
+	if(num.getB()<1000){cout<<" ";}cout<< num.getB() <<endl;
 	cout<<"----- -" <<endl; 
 	cin>> answer;
 	
-	int score= scoreCount(c, answer);
-	total =+ score;
-	cout<<"Your score: " <<total <<endl;
+	// show score
+	count.scoreCount(c, answer);
+	cout<<"Your score: " <<count.scorePrint() <<endl;
 	
+	//show different messages
 	if (answer==c){
 		cout<<"EASY AIN'T IT?" <<endl;
 	}
-	else if (answer==c && a%3==0){
+	else if (answer==c && c%3==0){
 		cout<<"EVERYTHING MAKES SENSE NOW!" <<endl;
 	}
-	else if (answer==c && a%7==0){
+	else if (answer==c && c%2==0){
 		cout<<"I KNOW THIS ISN'T YOUR FIRST TIME!" <<endl;
 	}
-	else if (answer!=c && a%3==0){
+	else if (answer!=c && c%3==0){
 		cout<<"AND I THOUGHT MY JOKES WERE BAD! THE ANSWER IS " << c <<endl;
 	}
 	else{cout<< "YOUR MATH TEACHERS ARE ASHAMED! THE ANSWER IS " << c <<endl;
 	}
+}
+	cout<<"Total score: " <<count.scorePrint() <<" / " <<session <<endl;
 	mathChoice();
 }
 
-
-void mathMulti(int x, int y, int answer, int total){
+void Math::mathMulti(){
 	
-	int c= x*y;
-	if(x<100){cout<<" ";} cout<< x <<endl;
-	if(y<100){cout<<" ";}cout<< y <<endl;
+	Randomizer num;
+	Score count;
+	
+	// ask sessions desired
+	do{
+	cout<<"How many sessions? "; cin>>session;
+	if(session<0){
+		cout<<"NEGATIVE INPUT" <<endl;
+	}
+	}while(session<0);
+	
+	//the game
+	for(int i=0; i<session; i++)
+	{
+	int c= num.setX()*num.setY();
+	if(num.getX()<1000){cout<<" ";}cout<< num.getX() <<endl;
+	if(num.getY()<1000){cout<<" ";}cout<< num.getY() <<endl;
 	cout<<"----- x" <<endl; 
 	cin>> answer;
 	
-	int score= scoreCount(c, answer);
-	total =+ score;
-	cout<<"Your score: " <<total <<endl;
+	//show score
+	count.scoreCount(c, answer);
+	cout<<"Your score: " <<count.scorePrint() <<endl;
 	
+	// Different replies
 	if (answer==c){
 		cout<<"YOUR LIFE HAS MEANING AGAIN!" <<endl;
 	}
-	else if (answer==c && x%5==0){
+	else if (answer==c && c%5==0){
 		cout<<"*SLOW CLAP*" <<endl;
 	}
 	else if (answer==c && c%3==0){
 		cout<<"YOU'RE THE MAN(OR WOMAN, IT DEPENDS) NOW!" <<endl;
 	}
-	else if (answer!=c && y%3==0){
+	else if (answer!=c && c%3==0){
 		cout<<"YOU WANT ROASTS WITH THAT? THE ANSWER IS " << c <<endl;
 	}
 	else{cout<< "MAYBE YOU PREFER CARD GAME? THE ANSWER IS " << c <<endl;
 	}
+}
+	cout<<"Total score: " <<count.scorePrint() <<" / " <<session <<endl;
 	mathChoice();
 }
 
-void mathDivid(int x, int y, int answer, int total){
-	int c= y/x;
-	if(y<100){cout<<" ";} cout<< y <<endl;
+void Math::mathDivid(){
+
+	Randomizer num;
+	Score count;
+	
+	// Ask amount of sessions desired
+	do{
+	cout<<"How many sessions? "; cin>>session;
+	if(session<0){
+		cout<<"NEGATIVE INPUT" <<endl;
+	}
+	}while(session<0);
+	
+	// The game
+	for(int i=0; i<session;i++){
+	int c= num.setX()/num.setY();
+	if(num.getX()<100){cout<<" ";} cout<<num.getX() <<endl;
 	cout<<"-----" <<endl; 
-	if(x<100){cout<<" ";}cout<< x <<endl
+	if(num.getY()<100){cout<<" ";}cout<<num.getY() <<endl
 	<<"= ";
 	
 	cin>> answer;
 	
-	int score= scoreCount(c, answer);
-	total =+ score;
-	cout<<"Your score: " <<total <<endl;
+	// Present score every round
+	count.scoreCount(c, answer);
+	cout<<"Your score: " <<count.scorePrint() <<endl;
 	
+	// Show different messages for every round
 	if (answer==c){
 		cout<<"YOUR BRAIN HAS EVOLVED!" <<endl;
 	}
-	else if (answer==c && x%5==0){
+	else if (answer==c && c%5==0){
 		cout<<"YOU GOT THE TOUCH!" <<endl;
 	}
-	else if (answer==c && c%9==0){
-		cout<<"ARE YOU STILL SINGLE?" <<endl;
+	else if (answer==c && c%2==0){
+		cout<<"I LOVE YOU... ARE YOU STILL SINGLE?" <<endl;
 	}
-	else if (answer!=c && x%5==0){
+	else if (answer!=c && c%5==0){
 		cout<<"MY BUM IS ITCHY... THE ANSWER IS " << c <<endl;
 	}
 	else{cout<< "HELLO DARKNESS, MY OLD FRIEND. THE ANSWER IS " << c <<endl;
 	}
+}
+	cout<<"Total score: " <<count.scorePrint() <<" / " <<session <<endl;
 	mathChoice();
 }
 
+// Main menu of math game
+void mathChoice(){
+	
+	//declare randomizer based on time
+	srand(time(0));
+	
+	//Call in Math class
+	Math game;
+	
+	int problem;
+	
+	cout<<endl <<"MeTH GENERATOR" <<endl <<"1.(+)		2.(-)		3.(X)		4. (/) IGNORE DECIMALS" <<endl
+		<<"Other numbers to quit" <<endl;
+	cout<<"Make a choice: "; cin>>problem;
+	
+	//Calling different functions based on choice
+	switch(problem){
+		case 1 : game.mathPlus();break;
+		case 2 : game.mathMinus();break;
+		case 3 : game.mathMulti();break;
+		case 4 : game.mathDivid();break;
+		default : cout<<"Bye";
+	}
+
+}
+
+/*
+int main(){
+	
+	srand(time(0));
+	
+	mathChoice();
+	
+	return 0;
+} */
