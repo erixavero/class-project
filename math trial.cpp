@@ -34,7 +34,7 @@ public:
 	}
 	
 	int setX(){
-	this->x= rand()%861+49;
+	this->x= rand()%331+49;
 	return x;
 	}
 	
@@ -43,7 +43,7 @@ public:
 	}
 	
 	int setY(){
-	this->y= rand()%617+70;
+	this->y= rand()%123+70;
 	return y;
 	}
 	
@@ -94,6 +94,10 @@ void Math::mathPlus(){
 	if(session<0){
 		cout<<"NEGATIVE INPUT" <<endl;
 	}
+	else if(session==0){
+		cout<<"You sure give up easily"<<endl;
+	}
+	
 	}while(session<0);
 	
 	//the game
@@ -139,6 +143,9 @@ void Math::mathMinus(){
 	cout<<"How many sessions? "; cin>>session;
 	if(session<0){
 		cout<<"NEGATIVE INPUT" <<endl;
+	}
+	else if(session==0){
+		cout<<"Are you even trying?"<<endl;
 	}
 	}while(session<0);
 	
@@ -186,6 +193,9 @@ void Math::mathMulti(){
 	if(session<0){
 		cout<<"NEGATIVE INPUT" <<endl;
 	}
+	else if(session==0){
+		cout<<"Maybe you'd like something else?"<<endl;
+	}
 	}while(session<0);
 	
 	//the game
@@ -231,6 +241,9 @@ void Math::mathDivid(){
 	cout<<"How many sessions? "; cin>>session;
 	if(session<0){
 		cout<<"NEGATIVE INPUT" <<endl;
+	}
+	else if(session==0){
+		cout<<"Aw... I was just getting to the good part"<<endl;
 	}
 	}while(session<0);
 	
@@ -289,7 +302,7 @@ void mathChoice(){
 		case 2 : game.mathMinus();break;
 		case 3 : game.mathMulti();break;
 		case 4 : game.mathDivid();break;
-		default : cout<<"Bye";
+		default : cout<<"Toodles...";
 	}
 
 }
