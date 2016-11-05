@@ -306,13 +306,3 @@ void mathChoice(){
 	}
 
 }
-
-/*
-int main(){
-	
-	srand(time(0));
-	
-	mathChoice();
-	
-	return 0;
-} */
