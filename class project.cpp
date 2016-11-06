@@ -14,8 +14,9 @@ int main(){
 	// Title screen
 	cout<<"//=================================\\\\"<<endl
 		<<"||"			<<setw(35)			 <<"||"<<endl
-		<<"||"<<setw(22)<<"FINAL PROJECT"<<setw(13)<<"||"<<endl
-		<<"||"<<setw(21) <<"Eric Savero"<<setw(14) <<"||"<<endl
+		<<"||"<<setw(23)<<"FINAL PROJECT"<<setw(12)<<"||"<<endl
+		<<"||"<<setw(22) <<"Eric Savero"<<setw(13) <<"||"<<endl
+		<<"||"<<setw(22) <<"2001 586294"<<setw(13) <<"||"<<endl
 		<<"||"			<<setw(35)			 <<"||"<<endl
 		<<"\\\\=================================//"<<endl;
 	

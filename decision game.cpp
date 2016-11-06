@@ -38,26 +38,27 @@ cout<<"The choices you make in this part will affect the story." <<endl
 	// Function orders are randomized as well
 	if(counter==6 || counter==9){
 		set1(choice, outcome);
+		cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 		set2(choice, outcome);
 	}
 	else if(counter==2 || counter==7){
 		set1(choice, outcome);
-		cout<<endl <<"----------------------------------------------"<<endl;
+		cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 		set3(choice, outcome);
 	}
 	else if(counter==3 || counter==8){
 		set2(choice, outcome);
-		cout<<endl <<"----------------------------------------------"<<endl;
+		cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 		set3(choice, outcome);
 	}
 	else if(counter==4 || counter==5){
 		set3(choice, outcome);
-		cout<<endl <<"----------------------------------------------"<<endl;
+		cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 		set1(choice, outcome);
 	}
 	else if(counter==1 || counter==10){
 		set2(choice, outcome);
-		cout<<endl <<"----------------------------------------------"<<endl;
+		cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 		set1(choice, outcome);
 	}
 
@@ -80,25 +81,25 @@ void set1(int choice, int counter){
 	if(choice==1){
 		if((counter+1)%2==0){
 			cout<<"He's still mad about you calling him nigga once and he's now a pro wrestler." <<endl
-				<<"He breaks your neck on the spot." <<endl;cin.get();
+				<<"He breaks your neck on the spot." <<endl;
 		}
 		else{
 			cout<<"He kneels down in from of you before you can say anything to apologize for the annoying words and proposed to you." <<endl
 				<<"He used to mock you because he loved you and still does, you accept the ring out of pity."<<endl
-				<<"You are now married, congratulations!" <<endl;cin.get();
+				<<"You are now married, congratulations!" <<endl;
 		}
 	}
 	else{
 		if((counter+1)%2==0){
 			cout<<"He accepts it as a joke and asks who you are, the guy next to him tell him to never mind." <<endl
-				<<"He doesn't remember you anymore" <<endl;cin.get();
+				<<"He doesn't remember you anymore" <<endl;
 		}
 		else{
 			cout<<"You utter your insult before you notice he is crippled in a wheelchair now." <<endl
 				<<"He lost his legs in an attempt to save a little girl from being clobbered by a bear," <<endl
-				<<"the girl still ended up dead from blood loss in his arms, I hope you're proud of yourself" <<endl;cin.get();
+				<<"the girl still ended up dead from blood loss in his arms, I hope you're proud of yourself" <<endl;
 			}
-		}
+		}cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 	
 	cout<<endl <<"You are a 7-year-old kid alone at home playing the floor is the lava. " <<endl
 		<<"The phone suddenly starts ringing when you're surfing on the coffee table." <<endl
@@ -112,21 +113,21 @@ void set1(int choice, int counter){
 			cout<<"You follow the river of pure lava into a dark cave, you jump onto a rock platform once" <<endl
 				<<"your coffee table board completely melts." <<endl
 				<<"You encounter an altar, on it you see the ancient golden beeping bird." <<endl
-				<<"You pick it up and it's your mom asking if you want some burger" <<endl;cin.get();
+				<<"You pick it up and it's your mom asking if you want some burger" <<endl;
 		}
 		else{
 			cout<<"The surfboard gives up on the overwhelming weight of your body" <<endl
-				<<"You sink into the lava below."<<endl;cin.get();
+				<<"You sink into the lava below."<<endl;
 		}
 	}
 	
 	else{
 		if((counter+1)%2==0){
 			cout<<"It's your parents saying that they will come home late and you should go to bed" <<endl
-				<<"They also say they'll always love you and your uncle will come to pick you up tomorrow morning"<<endl;cin.get();
+				<<"They also say they'll always love you and your uncle will come to pick you up tomorrow morning"<<endl;
 		}
 		else{
-			cout<<"the phone shuts off before you reach it, you're too slow!" <<endl;cin.get();
+			cout<<"the phone shuts off before you reach it, you're too slow!" <<endl;
 		}
 	}
 
@@ -148,25 +149,25 @@ void set2(int choice, int counter){
 			if((counter+1)%2==0){
 			cout<<"The country is really thankful for your kindness but your clients are disappointed." <<endl
 				<<"over half of your clients cut their ties with you." <<endl
-				<<"You make a good cover model for an issue of TIMEZ magazine though" <<endl;cin.get();
+				<<"You make a good cover model for an issue of TIMEZ magazine though" <<endl;
 		}
 		else {
 			cout<<"It is later found out that the country is run by fluffy puppies." <<endl
 				<<"You now have a lifetime supply of puppies." <<endl
-				<<"You apoligize to your disappointed clients by sending them puppies in tiny dresses, they happily accept." <<endl
-				<<"Before you know it, the world has been dominated by puppies. YAY?" <<endl;cin.get();
+				<<"You apologize to your disappointed clients by sending them puppies in tiny dresses, they happily accept." <<endl
+				<<"Before you know it, the world has been dominated by puppies. YAY?" <<endl;
 			}
 		}
 		else{
 			if((counter+1)%2==0){
 				cout<<"Your relationships with the cients are well-maintained, you expect the country to manage somehow." <<endl
-					<<"You never hear from them again."<<endl;cin.get();
+					<<"You never hear from them again."<<endl;
 			}
 			else{
 				cout<<"Someone leaked the info that you leave a country in need to die." <<endl
-					<<"Your clients fear the day you turn on them, they cut their ties." <<endl;cin.get();
+					<<"Your clients fear the day you turn on them, they cut their ties." <<endl;
 			}
-		}
+		}cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 
 		cout<<endl <<"You are on a date at an abandoned Nazi prison turned museum." <<endl
 				<<"Your companion looks at you expectantly" <<endl
@@ -189,10 +190,10 @@ void set2(int choice, int counter){
 					}while(choice<1 && choice>2);
 					
 					if(choice==1){
-						cout<<"You've been arrested for a bad joke gone wrong." <<endl;cin.get();
+						cout<<"You've been arrested for a bad joke gone wrong." <<endl;
 					}
 					else{
-						cout<<"You stick it in later that night." <<endl;cin.get();
+						cout<<"You stick it in later that night." <<endl;
 					}
 				}
 			else{
@@ -200,12 +201,12 @@ void set2(int choice, int counter){
 				cout<<"You companion finds the joke disrespectful towards the victims of the tragedy." <<endl
 					<<"You are left alone in the museum" <<endl
 					<<"the pressure of losing your companion overwhelms you and you commit suicide with an old Nazi torturing device." <<endl;
-					cin.get();
+					
 				}
 				else{
 					cout<<"Your companion laughs loudly towards the joke and admits as the illegitimate grandchild of" <<endl
 						<<"Dr. Carl Claumberg, a Nazi scientist who cruelly experimented artificial insemination on prisoners." <<endl
-						<<"You later stick it in." <<endl;cin.get();
+						<<"You later stick it in." <<endl;
 				}
 			}
 }
@@ -231,10 +232,10 @@ void set3(int choice, int counter){
 		
 		if(choice==1){
 			if((counter+1)%2==0){
-				cout<<"The drink was drugged, you were robbed..." <<endl;cin.get();
+				cout<<"The drink was drugged, you were robbed..." <<endl;
 			}
 			else{
-				cout<<"The drink comes out of the spot you least expected, but you still enjoy it" <<endl;cin.get();
+				cout<<"The drink comes out of the spot you least expected, but you still enjoy it" <<endl;
 			}
 		}
 		else{
@@ -242,14 +243,23 @@ void set3(int choice, int counter){
 		}
 		}
 		else{
+			if((counter+1)%2==0){
 			cout<<"You have nothing to talk about, the rain passed and the section is abandoned" <<endl;
-		}
+			}
+			else{
+				cout<<"You ask if you have met before."<<endl
+					<<"He admits that he is a lost Nigerian prince in need if a means to get home."<<endl
+					<<"You reminisce the days you spent living in Africa and you suddenly came into a realization."<<endl;
+				system("pause");
+				cout<<"You've never been to Africa and the bloke beside is nowhere to be seen."<<endl;
+			}
+		}cout<<endl <<"++++++++++++++++++++++++++++++++++++++++++++++"<<endl;system("pause");
 	
 	cout<<endl<<"You are stuck in an old castle with long branching hallways." <<endl
 		<<"You encounter the first split. Turn (1)left / (2)right: ";
 		do{
 		cin>>choice;
-		if(choice!=1 || choice!=2){
+		if(choice<1 || choice>2){
 			cout<<"Try again. ";
 		}
 		}while(choice<1 || choice>2);
@@ -262,7 +272,7 @@ void set3(int choice, int counter){
 				<<"What do you do? ";
 			do{
 			cin>>choice;
-			if(choice!=1 || choice!=2){
+			if(choice<1 || choice>2){
 			cout<<"Try again. ";
 			}
 			}while(choice<1 || choice>2);
@@ -298,16 +308,59 @@ void set3(int choice, int counter){
 					}
 					}while(choice!=1);
 					cout<<"It takes the banana and plucks your eyeballs with it. It prefers your eyeballs"<<endl
-						<<"You're stuck bumbling around the castle halls for the rest of your pathetic life."<<endl
-						<<"Thanks for playing"<<endl;
+						<<"You're stuck bumbling around the castle halls for the rest of your pathetic life."<<endl;
 				}
 				else{
 					cout<<"It takes the banana and eats it."<<endl
 						<<"It proceeds to eat your face since you are wearing a banana costume."<<endl
-						<<"Thanks for playing"<<endl
 						<<"BTW, Bananas are chom-choms"<<endl;
 				}
 			}
+		}
+		else{
+			cout<<"You encounter Gradiel Gaylord, your rival from art school who now leads the Royal Guards."<<endl
+				<<"You are reminded of the time he stuck a saxophone to your head and you went home like a drunken ostrich."<<endl
+				<<"He is badly wounded from a battle with the ancient Shadow Serpent ahead and his squad was massacred."<<endl
+				<<"He tells you to turn back and find another way."<<endl
+				<<"1. Be ballsie and face the Shadow Serpent"<<endl
+				<<"2. Honor his request and walk away"<<endl;
+				do{
+				cout<<"What do you do? ";cin>>choice;
+				}while(choice<1 || choice>2);
+				
+				if(choice==1){
+					cout<<"You encounter the Shadow Serpent"<<endl
+						<<"1. Cast lighting spell on its face"<<endl
+						<<"2. Turn back and run"<<endl;
+					do{
+					cout<<"What do you do? ";cin>>choice;
+					}while(choice<1 || choice>2);
+					if(choice==1){
+						cout<<"It's super effective."<<endl
+							<<"The Shadow Serpent collapses as you are brandishing on your glory."<<endl
+							<<"You've been flattened."<<endl;
+					}
+					else{
+						cout<<"As you turn away, the serpent tosses Shade Arrows at you."<<endl
+							<<"After enduring some scratches, you manage to go back to the spot where you left Gradiel earlier."<<endl
+							<<"He isn't there anymore."<<endl
+							<<"Suddenly a loud bang triggers and colors burst at your eyes."<<endl;
+							system("pause");
+						cout<<"HAPPY BIRTHDAY!"<<endl							
+							<<"The Shadow Serpent gives you a tap on the back with its massive tail and breaks your spine."<<endl;
+					}
+				}
+				else{
+					cout<<"As you walk away from him, you can hear him struggling to stand up."<<endl
+						<<"1. Turn around"<<endl
+						<<"2. Keep walking"<<endl;
+					do{
+					cout<<"What do you do? ";cin>>choice;
+					}while(choice<1 || choice>2);
+					
+					cout<<"He sticks a trombone to your head before you have time to reach."
+						<<"You die from suffocation, trombone is really tight, you know?"<<endl;
+				}
 		}
 	}
 	
@@ -322,7 +375,7 @@ void set3(int choice, int counter){
 				//Give illustion of choice to the player
 				cout<<"This game doesn't support saving. Open the gate(1)? ";
 			}
-			if(choice!=1){
+			else if(choice!=1){
 				cout<<"Try again. ";
 			}
 			}while(choice!=1);
@@ -347,15 +400,12 @@ void set3(int choice, int counter){
 							do{
 							cin>>choice;
 							if(choice!=1){
-								cout<<"You can do nothing else"<<endl;
+								cout<<"You can do nothing else but (1). ";
 							}
 							}while(choice!=1);
 							
 						cout<<"You took too long and the robot smashed your face in."<<endl
 							<<"Thanks for playing"<<endl;	
 					}
-			
 	}
-		
-		
 }
