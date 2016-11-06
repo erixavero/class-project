@@ -1,7 +1,7 @@
 #include<iostream>
-#include<ctime>
-#include<cstdlib>
-#include<windows.h>
+#include<ctime>		//use time
+#include<cstdlib>	//applying srand
+#include<windows.h>	//using sleep
 
 using namespace std;
 
@@ -24,7 +24,7 @@ unsigned seed= time(NULL);
 	// Randomize outcome of player choice
 	int outcome= rand();
 	
-	// variable for player to input throughout the game
+	// variable for user input throughout the game
 	int choice;
 	
 // Obligatory warning for decision games
@@ -34,7 +34,7 @@ cout<<"The choices you make in this part will affect the story." <<endl
 	// Sleep to let the player read before starting the scenarios
 	Sleep(1500);
 	
-	// Calling scenarios based on time counter from 0 - 10
+	// Calling scenarios based on time counter from 1 - 10
 	// Function orders are randomized as well
 	if(counter==6 || counter==9){
 		set1(choice, outcome);
@@ -66,6 +66,7 @@ cout<<"The choices you make in this part will affect the story." <<endl
 
 //Each function contains 2 scenarios so each function still has ordered scenarios
 
+//Scenario set 1
 void set1(int choice, int counter){
 	cout<<endl<<"You meet Remy, an old friend back in law school who used to call you Pussyfoot" <<endl
 		<<"for having such soft footsteps and you've always hated that." <<endl <<endl
@@ -133,6 +134,7 @@ void set1(int choice, int counter){
 
 }
 
+//Scenario set 2
 void set2(int choice, int counter){
 	
 	cout<<endl<<"You're the CEO of a canned food company. A country is in need of a hefty amount of food supply" <<endl
@@ -211,6 +213,7 @@ void set2(int choice, int counter){
 			}
 }
 
+//Scenario set 3
 void set3(int choice, int counter){
 	cout<<endl <<"You're stuck under a bus stop to wait for the rain to pass on your way home." <<endl
 		<<"You see a familiar face beside you but you can't really recall the name."<<endl
